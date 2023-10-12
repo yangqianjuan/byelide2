@@ -1,13 +1,13 @@
 {
-  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
-  "version": "0.2",
+  "import": ["@cspell/dict-lorem-ipsum/cspell-ext.json"],
+  "caseSensitive": false,
+  "dictionaries": ["custom-words"],
   "dictionaryDefinitions": [
     {
-      "name": "project-words",
-      "path": "./project-words.txt",
+      "name": "custom-words",
+      "path": "./custom-words.txt",
       "addWords": true
     }
   ],
-  "dictionaries": ["project-words"],
-  "ignorePaths": ["node_modules", "/project-words.txt"]
+  "ignorePaths": ["**/node_modules/**", "**/dist/**", "**/lib/**", "**/docs/**", "**/stats.html"]
 }

@@ -19,11 +19,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* .tiny-scrollbar::-webkit-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-gray-400) var(--color-gray-100);
-} */
-
 /* width */
 .tiny-scrollbar::-webkit-scrollbar {
   width: 6px;
