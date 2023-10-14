@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import { RouterView } from 'vue-router'
+import AppNavigator from '@/components/AppNavigator.vue'
 </script>
 
 <template>
+  <header>
+    <AppNavigator msg="hello" />
+  </header>
   <main>
-    <TheWelcome />
+    <RouterView />
   </main>
 </template>

@@ -5,9 +5,35 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '/app',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      children: [
+        {
+          path: 'dataSource',
+          name: 'dataSource',
+          component: import('../views/DataSource.vue'),
+          children: [
+            {
+              path: ':id',
+              component: import('../views/DataSourceContent/DataSourceContent.vue')
+            },
+            {
+              path: '',
+              redirect: 'dataSource/1'
+            }
+          ]
+        },
+        {
+          path: 'layout',
+          name: 'layout',
+          component: import('../views/layout.vue')
+        }
+      ]
+    },
+    {
+      path: '/',
+      redirect: '/app/layout'
     },
     {
       path: '/about',
