@@ -6,7 +6,7 @@ console.log(blocksBaseMetaList);
 
 </script>
 <template>
-  <div class="'block-drawer-wrapper'">
+  <div class="'blocks-drawer-wrapper'">
     <h3 class="drawer-title">组件</h3>
     <smooth-dnd-container
       behaviour="copy"
@@ -14,11 +14,11 @@ console.log(blocksBaseMetaList);
       orientation="vertical"
       :get-child-payload="(index: number) => blocksBaseMetaList[index]"
       tag="div"
-      class="'blocks-list'"
+      class="blocks-list"
     >
       <smooth-dnd-draggable v-for="d in blocksBaseMetaList" :key="d.type">
         <div class="blocks-item">
-          <div class="blocks-icon-wrapper">
+          <div class="block-icon-wrapper">
             <component :is="d.icon"></component>
           </div>
           <span class="block-name">{{ d.name }}</span>

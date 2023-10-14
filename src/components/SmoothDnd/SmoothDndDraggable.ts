@@ -11,6 +11,6 @@ export const SmoothDndDraggable = defineComponent({
   render() {
     const tagProps = getTagProps(this, constants.wrapperClass)
 
-    return h(tagProps.value, Object.assign({}, tagProps.props), this.$slot?.default?.())
+    return h(tagProps.value, Object.assign({}, tagProps.props), this.$slots?.default?.())
   }
 })
