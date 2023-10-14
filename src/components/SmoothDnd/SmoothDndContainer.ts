@@ -1,6 +1,7 @@
 import type { SmoothDnD } from 'smooth-dnd'
 import { dropHandlers, smoothDnD } from 'smooth-dnd'
 import { defineComponent, h } from 'vue'
+
 import { getTagProps, validateTagProp } from './utils'
 
 smoothDnD.dropHandler = dropHandlers.reactDropHandler().handler
@@ -16,12 +17,16 @@ const eventEmitterMap: Record<EventKey, string> = {
   'drag-leave': 'onDragLeave',
   'drop-ready': 'onDropReady'
 }
+
 export const SmoothDndContainer = defineComponent({
   name: 'SmoothDndContainer',
   setup() {
-    return { container: null as SmoothDnD | null }
+    return {
+      container: null as SmoothDnD | null
+    }
   },
   mounted() {
+    // emit events
     const options: any = Object.assign({}, this.$props)
     for (const key in eventEmitterMap) {
       const eventKey = key as EventKey
@@ -36,8 +41,8 @@ export const SmoothDndContainer = defineComponent({
     if (this.container) {
       try {
         this.container.dispose()
-      } catch (error) {
-        //console.log(error)
+      } catch {
+        // ignore
       }
     }
   },
