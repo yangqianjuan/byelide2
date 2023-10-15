@@ -2,12 +2,14 @@
   <div class="layout-wrapper">
     <AppLeftPanel />
     <AppEditorRenderer></AppEditorRenderer>
+    <AppRightPanel></AppRightPanel>
   </div>
 </template>
 
 <script lang="ts" setup>
 import AppLeftPanel from '@/components/AppLeftPanel/AppLeftPanel.vue'
 import AppEditorRenderer from '@/components/AppEditorRenderer/AppEditorRenderer.vue'
+import AppRightPanel from '@/components/AppRightPanel/AppRightPanel.vue'
 import { ref } from 'vue'
 const type = ref('button')
 </script>
