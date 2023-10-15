@@ -2,7 +2,7 @@
   <div class="layout-runner-content-wrapper tiny-scrollbar">
     <div class="layout-runner-content-header">
       <div class="layout-runner-content-navigator"></div>
-      <div class="layout-content-runner-title">byelide</div>
+      <div class="layout-runner-content-title">byelide</div>
     </div>
     <div class="layout-runner-content">
       <BlocksRenderer></BlocksRenderer>

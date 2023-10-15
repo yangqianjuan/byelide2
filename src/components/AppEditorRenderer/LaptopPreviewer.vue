@@ -9,10 +9,11 @@
       @preview-mode-change="greet"
       @full-screen="toggle"
       ></PreviewModeSwitcher>
-      <LaptopPreviewer>
-
-      </LaptopPreviewer>
+    
     </div>
+    <LaptopPreviewer>
+
+</LaptopPreviewer>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layout-wrapper">
     <AppLeftPanel />
     <AppEditorRenderer></AppEditorRenderer>
   </div>
@@ -12,4 +12,16 @@ import { ref } from 'vue'
 const type = ref('button')
 </script>
 
-<style scoped></style>
+<style scoped>
+.layout-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.layout-setting {
+  position: relative;
+  z-index: 6;
+  width: var(--panel-width);
+  box-shadow: var(--color-gray-300) -1px 0 0;
+}
+</style>
